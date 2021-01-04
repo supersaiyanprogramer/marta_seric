@@ -2,7 +2,7 @@
 while True:
     unos_1 = input("Unesite nešto: ")
     unos_2 = input("Unesite još nešto: ")
-    unos_3 ==0
+    
 #drugi dio: provjera vrste podataka
     try:
         unos_1 = int(unos_1)
