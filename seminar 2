@@ -1,0 +1,32 @@
+#skup samoglasnika
+smgl = ['a', 'e', 'i', 'o', 'u']
+
+#unos rečenice
+unos = input("Unesite neku rečenicu: ")
+print("Unijeli ste: ", unos)
+
+#stavi sve u lower case
+unos = unos.lower()
+print("Pretvaranje svih slova u mala. ", unos)
+
+#brojanje samoglsnika
+zbroj_1 = 0
+zbroj_2 = 0
+
+#brojanje samoglansika, suglasnika i je li riječ o nečemu trećem
+for s in unos:
+    if s.isalpha():
+        if s in smgl:
+            zbroj_1 +=1
+            print("unijeli ste samoglasnik: ", s)
+        else:
+            zbroj_2 +=1
+            print("unijeli ste suglasnik: ", s)
+#uneseno je broj, razmak, crtice, točka...           
+    else:
+        print("unešeno nije ni samoglasnik ni suglasnik nego nešto treće.")
+        
+#zbroj samoglsnika i suglasnika
+print()
+print("zbroj samoglasnika: ", zbroj_1)
+print("zbroj suglasnika: ", zbroj_2)
