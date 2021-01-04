@@ -1,0 +1,48 @@
+#prvi dio: tražite korisnika da unese podatke
+while True:
+    unos_1 = input("Unesite nešto: ")
+    unos_2 = input("Unesite još nešto: ")
+    unos_3 ==0
+#drugi dio: provjera vrste podataka
+    try:
+        unos_1 = int(unos_1)
+        #u slučaju greške u vrijednostima
+    except ValueError:
+        try:
+            unos_1 = float(unos_1)
+        except ValueError:
+            unos_1 = str(unos_1)
+                
+    try:
+        unos_2 = int(unos_2)
+        #u slučaju greške u vrijednostima
+    except ValueError:
+        try:
+            unos_2 = float(unos_2)
+        except ValueError:
+            unos_2 = str(unos_2)
+                
+#treći dio: ako je unos broj zbroji, oduzmi, podijeli i pomnoži ga, te napiši rezultat. U suprotnom isprintaj "Concantenation"
+    if isinstance(unos_1, (int,float)):
+        if isinstance(unos_2, (int, float)):
+            rslt_1 = unos_1 + unos_2
+            rslt_2 = unos_1 - unos_2
+            rslt_3 = unos_1 / unos_2
+            rslt_4 = unos_1 * unos_2
+            print(str(unos_1) + " + " + str(unos_2) + " = " + str(rslt_1))
+            print(str(unos_1) + " - " + str(unos_2) + " = " + str(rslt_2))
+            print(str(unos_1) + " / " + str(unos_2) + " = " + str(rslt_3))
+            print(str(unos_1) + " * " + str(unos_2) + " = " + str(rslt_4))
+        else:
+            unos_1 = str(unos_1)
+            unos_2 = str(unos_2)
+            Concantenation = unos_1 + unos_2
+            print("Concantenation: ", Concantenation)
+        #izlazak iz programa ili vraćanje na početak   
+        concant = input("Za izlaz kliknite 'i' nastavak bilo što drugo: \t")
+        if concant.lower().strip()=='i':
+            print("Odlučili ste se za izlazak")
+            break
+        else:
+            continue
+                
